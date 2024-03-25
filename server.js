@@ -38,7 +38,7 @@ app.get('/', (req, res)=>{
 app.post('/register', async(req,res)=>{
     try{
         const {name,email,password} = req.body;
-        const existingUser = await Registration.findOne({email:email});
+        const existingUser = await Registration.findOne({email:{$regex:new RegExp(email,"i")}});
         if(!existingUser){
             const registrationData = new Registration({
                 name,
