@@ -1,0 +1,28 @@
+@import 'reset.css';
+@import 'font.css';
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: animateBg 14s linear infinite;
+    background-image: linear-gradient(90deg,#1dc7b6,#b4188a,#2b11c0,#f67512,#460cf4);
+    background-size: 400% 100%;
+}
+ /*background animation  */
+@keyframes animateBg {
+    0% { background-position: 0% 0%; }
+    100% { background-position: 100% 0%; }
+}
+.container{
+    font-family: 'Inter';
+    background-color: white;
+    padding: 20px;
+    max-width: 30vw;
+    height: 20vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
